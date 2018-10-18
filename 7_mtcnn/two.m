@@ -17,8 +17,8 @@
     num_pessoas = 10; %1-136
 
 %Load the Histograms
-    run ../load_MTCNN   %Load the Database
-    run ../make_lbp;    %Make the LBP
+    run load_MTCNN   %Load the Database
+    run make_lbp;    %Make the LBP
 
 progress = 'Guessing'
 

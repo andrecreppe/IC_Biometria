@@ -1,7 +1,7 @@
 progress = 'Loading MTCNN'
    
 %Database Gather -> Image name
-imagefiles = dir('../PICTURES/Arface_mtcnn_v2/face/*.bmp');
+imagefiles = dir('../../DATABASES/Arface_mtcnn_v2/face/*.bmp');
 tam = length(imagefiles);
 
 filename{1, tam} = [];
@@ -25,7 +25,7 @@ for i=1 : num_files
    a = a + 1;
    
    nome = imagefiles{1, a};
-   pic_new = imread(strcat('../PICTURES/Arface_mtcnn_v2/face/',nome));
+   pic_new = imread(strcat('../../DATABASES/Arface_mtcnn_v2/face/',nome));
 
    images{i} = rgb2gray(pic_new);
    
