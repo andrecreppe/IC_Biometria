@@ -13,8 +13,8 @@
     close all
 
 %Number of files
-    num_img = 3; %1-13
-    num_pessoas = 10; %1-136
+    num_img = 13; %1-13
+    num_pessoas = 20; %1-136
 
 %Load the Histograms
     run load_MTCNN   %Load the Database
