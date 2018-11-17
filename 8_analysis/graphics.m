@@ -10,10 +10,9 @@
         %region = 'right';
     
 %Load base
-    %run load_data;
-        %run show_images;
     run load_data_mono;
-        %run show_images_mono;
-    run comparison;
+        %run extra/show_images_mono;
+    run lbp;
+    run compareit;
     
 %FAR Graph
