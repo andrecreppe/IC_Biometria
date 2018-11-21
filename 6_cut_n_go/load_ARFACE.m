@@ -1,7 +1,7 @@
 progress = 'Loading DATABASE'
 
 %Database Gather -> Image name
-imagefiles = dir('../PICTURES/ARFACE_database/*.bmp');
+imagefiles = dir('../../DATABASES/ARFACE_database/*.bmp');
 tam = length(imagefiles);
 
 filename{1, tam} = [];

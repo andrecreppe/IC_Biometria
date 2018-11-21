@@ -17,9 +17,9 @@
     %num_files = -1 -> All the database (+3200 pics)
 
 %Load the Histograms
-    run ../load_ARFACE;     %Pic
-    run ../tres_por_quatro; %Cut
-    run ../make_lbp;     %LBP
+    run load_ARFACE;     %Pic
+    run tres_por_quatro; %Cut
+    run make_lbp;     %LBP
 
 progress = 'Guessing'
 
