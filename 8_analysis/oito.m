@@ -1,6 +1,5 @@
 %Setup
     close all
-    clear all
     
 %Quantity
     num_img = 4;
@@ -15,5 +14,5 @@
     run lbp;
     run compareit;
     
-%FAR Graph
-    %??
+    
+    %cp = (comparison - minimo) / (maximo - minimo)

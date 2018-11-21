@@ -11,7 +11,7 @@ for i=1 : total
     d = 0;
     
     for j=1 : total
-        comparison(i, j) = pdist2(base, LBPDatabase(j, :));
+        comparison(i, j) = pdist2(base, LBPDatabase(j, :), 'cityblock');
     end
 end
 
