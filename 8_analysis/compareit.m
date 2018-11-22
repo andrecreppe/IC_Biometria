@@ -1,19 +1,41 @@
 progress = 'Comparating images'
 
-total = num_pessoas * num_img;
-
-comparison = zeros(total, total);
-
-%---------
-
-for i=1 : total
-    base = LBPDatabase(i, :);
-    d = 0;
-    
-    for j=1 : total
-        comparison(i, j) = pdist2(base, LBPDatabase(j, :), 'cityblock');
+%Base
+    gen = 0;
+    for a=1 : num_img-1
+        gen = gen + a;
     end
-end
+    genuine = zeros(num_pessoas, gen);
+    
+    num = (num_pessoas * num_img) - num_img;
+    impost = zeros(num_pessoas, num);
+    
+%Vectors
+    %Genuine
+        for a=num_img : num_img : s1 %for to All People
+            
+            rem = 1;
+            pos = 1;
+                
+            for b=1 : num_img - 1 %for to Internal Sorting
+                
+                for c=rem : num_img %for to Compare
+                    
+                    inx = a / num_img;
+                    tocalc = (c * (a/num_img)) + b;
+                    
+                    genuine(inx, pos) = pdist2(LBPDatabase(b, :), LBPDatabase(tocalc, :), 'cityblock');
+                    
+                    pos = rem + 1;
+                    
+                end
 
-clear i; clear d; clear j;
-clear total; clear base;
+                rem = rem + 1;
+                
+            end
+        end
+        
+    %Impost
+    
+%Normalize matrix
+    

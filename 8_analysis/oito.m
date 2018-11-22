@@ -1,5 +1,6 @@
 %Setup
     close all
+    clear all
     
 %Quantity
     num_img = 4;
@@ -9,10 +10,10 @@
         %region = 'right';
     
 %Load base
-    run load_data_mono;
+    run load_data;
         %run extra/show_images_mono;
     run lbp;
-    run compareit;
+    %run compareit;
     
     
     %cp = (comparison - minimo) / (maximo - minimo)

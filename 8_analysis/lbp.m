@@ -1,4 +1,4 @@
-progess = 'Making the LBP'
+progress = 'Making the LBP'
 
 for a=1 : s1
    %Make LBP
