@@ -1,4 +1,5 @@
 %Setup
+    clc;
     close all
     clear all
     
@@ -13,7 +14,5 @@
     run load_data;
         %run extra/show_images_mono;
     run lbp;
-    %run compareit;
-    
-    
-    %cp = (comparison - minimo) / (maximo - minimo)
+    run compareit;
+    run plot_hist;
