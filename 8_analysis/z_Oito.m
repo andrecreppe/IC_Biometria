@@ -6,7 +6,8 @@
 %Quantity
     num_img = 4;
     num_pessoas = 20;
-        region = 'face';
+        
+    region = 'face';
         %region = 'left';
         %region = 'right';
     
@@ -16,3 +17,4 @@
     run lbp;
     run compareit;
     run plot_hist;
+    run threshold;

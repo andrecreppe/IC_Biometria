@@ -1,4 +1,4 @@
-progress = 'Making the Curve'
+progress = 'Making the Histograms'
 
 %Setup
     hist_g = zeros(1, 100);
@@ -34,3 +34,8 @@ progress = 'Making the Curve'
     plot(linspace(0,100,100), hist_i);
 
     hold off;
+    
+ %-----
+ clear genuine; 
+ clear impost;
+ clear LBPDatabase;
