@@ -13,6 +13,8 @@
     run load_data;
         %run extra/show_images_mono;
     run lbp;
-    %run compareit;
-    %run plot_hist;
-    %run threshold;
+    run compareit;
+    run plot_hist;
+    run threshold;
+
+    clear images_f; clear images_l;

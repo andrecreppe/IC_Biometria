@@ -34,8 +34,10 @@ progress = 'Making the Histograms'
     plot(linspace(0,100,100), hist_i);
 
     hold off;
+
+    clear s1;
     
  %-----
- %clear genuine; 
- %clear impost;
+ clear genuine; 
+ clear impost;
  clear LBPDatabase;

@@ -1,118 +1,105 @@
 progress = 'Loading MTCNN mono'
 
-region = 'face';
-   
-%Database Gather -> Image name
+%----
+
 direc = '../../DATABASES/Arface_mtcnn_v2/';
-    direc = strcat(direc, region);
-    direc = strcat(direc, '/');
-    direc2 = strcat(direc, '*.bmp');
-imagefiles = dir(direc2);
-tam = length(imagefiles);
 
-filename{1, tam} = [];
-for i=1 : tam
-    filename{1, i} = imagefiles(i).name;
-end
-
-imagefiles = natsortfiles(filename);
-
-%Load selective
 num_files = num_pessoas * num_img;
 
-images{1, num_files} = [];
+%-----
 
-%Read selective
-cont = 0;
-a = 0;
-for i=1 : num_files
-   a = a + 1;
-   
-   nome = imagefiles{1, a};
-   pic_new = imread(strcat(direc ,nome));
+region = 'face';
 
-   images{i} = rgb2gray(pic_new);
-   
-   cont = cont + 1;
-   
-   if cont == num_img
-       cont = 0;
-       a = a + 13 - num_img;
-   end
-end
+    %Database Gather -> Image name
+        direc2 = strcat(direc, region);
+        direc2 = strcat(direc2, '/');
+        direc3 = strcat(direc2, '*.bmp');
 
-images_f{1, (num_pessoas * num_img)} = [];
+        imagefiles = dir(direc3);
+        tam = length(imagefiles);
 
-s1 = 1;
+        filename{1, tam} = [];
+        for i=1 : tam
+            filename{1, i} = imagefiles(i).name;
+        end
 
-for i=1 : num_files
-    images_f{s1} = images{i};
-    s1 = s1 + 1;
-end
+        imagefiles = natsortfiles(filename);
 
-s1 = s1 - 1;
+        
+    %Load selective
+        images_f{1, num_files} = [];
 
+        cont = 0;
+        a = 0;
+        for i=1 : num_files
+           a = a + 1;
+
+           nome = imagefiles{1, a};
+           pic_new = imread(strcat(direc2 ,nome));
+
+           images_f{i} = rgb2gray(pic_new);
+
+           cont = cont + 1;
+
+           if cont == num_img
+               cont = 0;
+               a = a + 13 - num_img;
+           end
+        end
+        
 %-----
 
 region = 'left';
 
-direc = '../../DATABASES/Arface_mtcnn_v2/';
-    direc = strcat(direc, region);
-    direc = strcat(direc, '/');
-    direc2 = strcat(direc, '*.bmp');
-imagefiles = dir(direc2);
-tam = length(imagefiles);
+    %Database Gather -> Image name
+        direc2 = strcat(direc, region);
+        direc2 = strcat(direc2, '/');
+        direc3 = strcat(direc2, '*.bmp');
 
-filename{1, tam} = [];
-for i=1 : tam
-    filename{1, i} = imagefiles(i).name;
-end
+        imagefiles = dir(direc3);
+        tam = length(imagefiles);
 
-imagefiles = natsortfiles(filename);
+        filename{1, tam} = [];
+        for i=1 : tam
+            filename{1, i} = imagefiles(i).name;
+        end
 
-num_files = num_pessoas * num_img;
+        imagefiles = natsortfiles(filename);
 
-images_l{1, num_files} = [];
+        
+    %Load selective
+        images_l{1, num_files} = [];
 
-cont = 0;
-a = 0;
-for i=1 : num_files
-   a = a + 1;
-   
-   nome = imagefiles{1, a};
-   pic_new = imread(strcat(direc ,nome));
+        cont = 0;
+        a = 0;
+        for i=1 : num_files
+           a = a + 1;
 
-   images_l{i} = rgb2gray(pic_new);
-   
-   cont = cont + 1;
-   
-   if cont == num_img
-       cont = 0;
-       a = a + 13 - num_img;
-   end
-end
+           nome = imagefiles{1, a};
+           pic_new = imread(strcat(direc2 ,nome));
 
-images_l{1, (num_pessoas * num_img)} = [];
+           images_l{i} = rgb2gray(pic_new);
 
-s1 = 1;
+           cont = cont + 1;
 
-for i=1 : num_files
-    images_l{s1} = images{i};
-    s1 = s1 + 1;
-end
-
-s1 = s1 - 1;
-
+           if cont == num_img
+               cont = 0;
+               a = a + 13 - num_img;
+           end
+        end
+    
 %------
 
-clear imagefiles; clear i; clear tam;
-clear region; clear direc2;
+%Clearing
+    clear imagefiles; clear i; clear tam;
+    clear region; clear direc2; clear direc3;
 
-clear imagefiles; clear fazer; clear filename; clear direc;
-clear nome; clear fazer; clear i; 
-clear a; clear cont; 
-clear pic; clear pic_new; 
+    clear imagefiles; clear fazer; clear filename; clear direc;
+    clear nome; clear fazer; clear i; 
+    clear a; clear cont; 
+    clear pic; clear pic_new; 
 
-clear i; clear fazer;
-clear images; 
-clear num_files;
+    clear i; clear fazer;
+    clear images; 
+    clear num_files;
+    

@@ -1,8 +1,8 @@
 progress = 'Making the Histograms'
 
 %Setup
-    hist_g = zeros(1, 100);
-    hist_i = zeros(1, 100);
+    hist_g = zeros(1, 200);
+    hist_i = zeros(1, 200);
 
 %Count
     %Genuine HIST
@@ -26,16 +26,16 @@ progress = 'Making the Histograms'
     clear a; clear b; clear gen;
    
 %Ploting it
-    plot(linspace(0,100,100), hist_g);
+    plot(linspace(0,200,200), hist_g);
     title('Comparisons');
 
     hold on;
     
-    plot(linspace(0,100,100), hist_i);
+    plot(linspace(0,200,200), hist_i);
 
     hold off;
     
  %-----
- %clear genuine; 
- %clear impost;
+ clear genuine; 
+ clear impost;
  clear LBPDatabase;

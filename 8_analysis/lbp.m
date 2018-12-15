@@ -30,8 +30,6 @@ for a=1 : s1
             buff = LBPDatabase;
             LBPDatabase = [buff; hist];
         end
-        
-     %
 end
 
 %Clear to save

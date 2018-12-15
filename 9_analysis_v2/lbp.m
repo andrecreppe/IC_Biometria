@@ -1,6 +1,8 @@
 progress = 'Making the LBP'
 
-for a=1 : num_pessoas
+total = num_pessoas * num_img;
+
+for a=1 : total
    %Make LBP
        [pic_alt, pic_larg] = size(images_f{a});
         pic_new = images_f{a};
@@ -32,7 +34,7 @@ for a=1 : num_pessoas
         end
 end
 
-for a=1 : num_pessoas
+for a=1 : total
    %Make LBP
        [pic_alt, pic_larg] = size(images_l{a});
         pic_new = images_l{a};
@@ -65,8 +67,10 @@ for a=1 : num_pessoas
 end
 
 %Clear to save
-clear a; clear b; clear buff;
-clear pic_alt; clear pic_larg; clear pic_new;
-clear I; clear lbpFeatures; clear numNeighbors;
-clear numBins; clear lbpCellHists; clear pCellHists;
-clear lbpFeatures; clear quadrant; clear hist;
+    clear total;
+    clear a; clear b; clear buff;
+    clear pic_alt; clear pic_larg; clear pic_new;
+
+    clear I; clear lbpFeatures; clear numNeighbors;
+    clear numBins; clear lbpCellHists; clear pCellHists;
+    clear lbpFeatures; clear quadrant; clear hist;

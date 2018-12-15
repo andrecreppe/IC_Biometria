@@ -37,9 +37,8 @@ progress = 'Finding the Threshold'
         clear sum_i; clear sum_i_ant;
         
     %Common point (y1 = y2)
-        t = (b_i - b_g) / (a_g - a_i)
+        t = (b_i - b_g) / (a_g - a_i);
         
-        %clear a_g; clear b_g;
         clear a_i; clear b_i;
         
     %Error rate
