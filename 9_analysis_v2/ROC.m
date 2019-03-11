@@ -23,3 +23,4 @@ y = 0;
     clear i;
 
 %AUC Calculation
+    AUC = trapz(roc(1,:), roc(2,:))
