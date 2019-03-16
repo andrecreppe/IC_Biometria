@@ -9,8 +9,13 @@
     
 %Load base
     run load_all;
+<<<<<<< HEAD
     run lbp;
     %run comparisons;
+=======
+    %run lbp;
+    %run compareit;
+>>>>>>> master
     %run plot_hist;
     %run threshold;
     %run ROC;
