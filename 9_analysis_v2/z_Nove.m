@@ -15,6 +15,7 @@
     run lbp;
     run compareit;
     run plot_hist;
+    pause;
     run threshold;
     run ROC;
 

@@ -2,11 +2,8 @@ progress = 'Making the LBP'
 
 total = num_pessoas * num_img;
 
-<<<<<<< HEAD
 %--------- LBP FRONT ----------
 
-=======
->>>>>>> master
 for a=1 : total
    %Make LBP
        [pic_alt, pic_larg] = size(images_f{a});
@@ -39,11 +36,8 @@ for a=1 : total
         end
 end
 
-<<<<<<< HEAD
 %--------- LBP LEFT ----------
 
-=======
->>>>>>> master
 for a=1 : total
    %Make LBP
        [pic_alt, pic_larg] = size(images_l{a});
@@ -76,7 +70,6 @@ for a=1 : total
         end
 end
 
-<<<<<<< HEAD
 %--------- LBP RIGHT ----------
 
 for a=1 : total
@@ -111,8 +104,6 @@ for a=1 : total
         end
 end
 
-=======
->>>>>>> master
 %Clear to save
     clear total;
     clear a; clear b; clear buff;
