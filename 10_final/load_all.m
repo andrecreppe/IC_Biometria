@@ -88,7 +88,7 @@ region = 'left';
        end
     end
     
-%--------- LEFT EYE ---------
+%------- RIGHT EYE ---------
 
 region = 'right';
 

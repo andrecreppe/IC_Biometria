@@ -14,6 +14,6 @@ num_pessoas = 20;
 run load_all;
 run lbp;
 run comparisons;
-%run histograms;
+run histograms;
 %run threshold;
 %run ROC;

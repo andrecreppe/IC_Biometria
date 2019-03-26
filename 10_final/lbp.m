@@ -74,8 +74,8 @@ end
 
 for a=1 : total
    %Make LBP
-       [pic_alt, pic_larg] = size(images_l{a});
-        pic_new = images_l{a};
+       [pic_alt, pic_larg] = size(images_r{a});
+        pic_new = images_r{a};
         hist = [];
     
         %LBP Each Part

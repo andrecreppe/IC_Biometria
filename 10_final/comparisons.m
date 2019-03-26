@@ -185,7 +185,7 @@ test4_all_i = impost_f + impost_l + impost_r;
     
 %------------ CLEARING -------------
 
-clear num; %clear gen;
+clear num; %clear gen; clear impost;
 
 clear a; clear base; clear cont; 
 clear reset;
