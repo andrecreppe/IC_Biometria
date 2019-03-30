@@ -15,5 +15,5 @@ run load_all;
 run lbp;
 run comparisons;
 run histograms;
-%run threshold;
-%run ROC;
+run eficiency;
+run curves;
