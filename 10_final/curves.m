@@ -29,7 +29,7 @@ y = 0;
     clear i;
 
 %AUC Calculation
-    resp(1,1) = trapz(roc(1,:), roc(2,:));
+    resp(1,2) = trapz(roc(1,:), roc(2,:));
     
 %------- CASE 2 - ROC CURVE ----------
 
