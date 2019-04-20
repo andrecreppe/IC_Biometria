@@ -1,12 +1,18 @@
-img1 = imread('bricks.jpg');
-img2 = imread('bricksRotated.jpg');
+function resp = recognition( img1, img2 )
+%Recognition img1 (matrix) and img2 (matrix)
+%   Compare two images and return how much they are equal
+%   Using LBP/4 method
+
+%---------- SETUP ------------
+
+    LBP_img = zeros(2, 236);
 
 %---------- LBP ------------
+
     [pic_alt, pic_larg] = size(img1);
     pic_new = img1;
     hist = [];
 
-    %LBP Each Part
     for b=1 : 4
         if b == 1
             I = pic_new(1:floor(pic_alt/2), 1:floor(pic_larg/2));
@@ -21,13 +27,14 @@ img2 = imread('bricksRotated.jpg');
         hist = [hist extractLBPFeatures(I)];
     end
     
-    LBP_img1 = hist;
+    LBP_img(1,:) = hist;
+    
+    %-----------------------------------------------%
     
     [pic_alt, pic_larg] = size(img2);
     pic_new = img2;
     hist = [];
 
-    %LBP Each Part
     for b=1 : 4
         if b == 1
             I = pic_new(1:floor(pic_alt/2), 1:floor(pic_larg/2));
@@ -42,11 +49,17 @@ img2 = imread('bricksRotated.jpg');
         hist = [hist extractLBPFeatures(I)];
     end
     
-    LBP_img2 = hist;
+    LBP_img(2,:) = hist;
     
 %---------- COMPARISON ------------
 
-    %DIFF = pdist2(LBP_img1(1,:), LBP_img2(1,:), 'cityblock');
-    DIFF = corr2(img1, img2);
-    DIFF = 100 - (DIFF*100)
+    comp = pdist2(LBP_img(1,:), LBP_img(2,:), 'cityblock');
+    treshold = 3.90;
+    
+    if(comp <= treshold)
+        resp = true;
+    else
+        resp = false;
+    end
+end
 

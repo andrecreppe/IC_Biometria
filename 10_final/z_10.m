@@ -12,8 +12,8 @@ num_pessoas = 20;
 %------ THE CODE ----------
 
 run load_all;
-run lbp;
-run comparisons;
-run histograms;
-run eficiency;
-run curves;
+%run lbp;
+%run comparisons;
+%run histograms;
+%run eficiency;
+%run curves;
